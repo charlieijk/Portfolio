@@ -76,6 +76,9 @@
 
                     <input type="radio" class="btn-check" name="project-filter" id="algorithm-projects" autocomplete="off">
                     <label class="btn btn-outline-primary" for="algorithm-projects">Algorithms</label>
+
+                    <input type="radio" class="btn-check" name="project-filter" id="game-projects" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="game-projects">Games</label>
                 </div>
             </div>
         </section>
@@ -166,7 +169,7 @@
                 </div>
 
                 <!-- Aunty Betty's Lair Game -->
-                <div class="col-lg-4 col-md-6 mb-4 project-item web-project">
+                <div class="col-lg-4 col-md-6 mb-4 project-item game-project">
                     <div class="project-card">
                         <div class="project-image">
                             <div style="height: 250px; background: linear-gradient(135deg, #4facfe, #00f2fe); display: flex; align-items: center; justify-content: center; color: white;">
@@ -352,6 +355,42 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Pacman Project -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item game-project">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div style="height: 250px; background: linear-gradient(135deg, #ffd89b, #19547b); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-ghost fa-4x"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="text-white text-center">
+                                    <h4>Pacman Project</h4>
+                                    <p>Free for all game based on the original 1997 Pacman</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Pacman</h3>
+                                <span class="project-type">Games</span>
+                            </div>
+                            <p class="project-description">
+                                A comprehensive Java programming project demonstrating core concepts including 2D graphics rendering, event handling, game state management, and multi-threaded programming through the beloved Pacman game mechanics.
+                            </p>
+                            <div class="project-technologies">
+                                <span class="tech-badge c">Java</span>
+                                <span class="tech-badge networking">Games</span>
+                                <span class="tech-badge systems">2-D Rendering</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-github me-1"></i>Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -429,6 +468,8 @@
                         } else if (filter === 'system-projects' && item.classList.contains('system-project')) {
                             item.style.display = 'block';
                         } else if (filter === 'algorithm-projects' && item.classList.contains('algorithm-project')) {
+                            item.style.display = 'block';
+                        } else if (filter === 'game-projects' && item.classList.contains('game-project')) {
                             item.style.display = 'block';
                         } else {
                             item.style.display = 'none';
