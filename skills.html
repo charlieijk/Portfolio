@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Charlie Cullen's Portfolio</title>
+    <meta name="description" content="Explore Charlie Cullen's technical skills including Python, JavaScript, React, systems programming, and more. Full-Stack Developer with diverse expertise.">
+    <meta property="og:title" content="Charlie Cullen's Technical Skills">
+    <meta property="og:description" content="Comprehensive overview of programming languages, frameworks, and technologies mastered by Charlie Cullen.">
+    <meta property="og:type" content="website">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="updated-styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn" class="btn btn-outline-primary btn-sm">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <i class="fas fa-code me-2"></i>Charlie Cullen
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <!-- Hero Section -->
+        <section class="hero-section mb-5 text-center">
+            <div class="hero-content">
+                <h1 class="display-4 mb-3 fade-in">My <span class="text-gradient">Technical Skills</span></h1>
+                <p class="lead mb-4 fade-in-delay">A comprehensive toolkit for modern software development</p>
+                <p class="mb-4 fade-in-delay-2">From low-level systems programming to modern web frameworks, I've built expertise across the full technology stack.</p>
+            </div>
+        </section>
+
+        <!-- Skills Overview Stats -->
+        <section class="stats-section mb-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-3 col-6 mb-3">
+                    <div class="stat-card">
+                        <i class="fas fa-code fa-2x text-primary mb-2"></i>
+                        <h4>8+</h4>
+                        <p>Programming Languages</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <div class="stat-card">
+                        <i class="fas fa-layer-group fa-2x text-primary mb-2"></i>
+                        <h4>12+</h4>
+                        <p>Frameworks & Tools</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <div class="stat-card">
+                        <i class="fas fa-project-diagram fa-2x text-primary mb-2"></i>
+                        <h4>7+</h4>
+                        <p>Major Projects</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <div class="stat-card">
+                        <i class="fas fa-graduation-cap fa-2x text-primary mb-2"></i>
+                        <h4>2+</h4>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Sections -->
+        <section id="skills" class="section-padding mb-5">
+            <!-- Core Programming Languages -->
+            <div class="skills-category mb-5">
+                <h2 class="section-title text-center mb-4">Core Programming Languages</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-python fa-3x text-primary mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">Python</h4>
+                            <p class="skill-description">Advanced proficiency in Python for backend development, data processing, algorithms, and automation. Experience with Flask, Django, and scientific libraries.</p>
+                            <div class="skill-badges mb-3">
+                                <span class="skill-badge python">Flask</span>
+                                <span class="skill-badge python">Django</span>
+                                <span class="skill-badge python">NumPy</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" style="width: 90%"></div>
+                                </div>
+                                <small class="text-muted">Advanced</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square fa-3x text-warning mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">JavaScript</h4>
+                            <p class="skill-description">Proficient in modern JavaScript (ES6+), DOM manipulation, async programming, and popular frameworks for dynamic web applications.</p>
+                            <div class="skill-badges mb-3">
+                                <span class="skill-badge js">ES6+</span>
+                                <span class="skill-badge js">React</span>
+                                <span class="skill-badge js">Node.js</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" style="width: 85%"></div>
+                                </div>
+                                <small class="text-muted">Advanced</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-java fa-3x text-danger mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">Java</h4>
+                            <p class="skill-description">Strong foundation in Java with experience in object-oriented programming, multithreading, data structures, and enterprise applications.</p>
+                            <div class="skill-badges mb-3">
+                                <span class="skill-badge java">OOP</span>
+                                <span class="skill-badge java">Threading</span>
+                                <span class="skill-badge java">Spring</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 80%"></div>
+                                </div>
+                                <small class="text-muted">Proficient</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-code fa-3x text-info mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">C</h4>
+                            <p class="skill-description">Systems programming expertise with C for low-level development, memory management, POSIX threads, and performance-critical applications.</p>
+                            <div class="skill-badges mb-3">
+                                <span class="skill-badge c">POSIX</span>
+                                <span class="skill-badge c">Memory Mgmt</span>
+                                <span class="skill-badge c">Systems</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" style="width: 75%"></div>
+                                </div>
+                                <small class="text-muted">Proficient</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-terminal fa-3x text-success mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">Shell Scripting</h4>
+                            <p class="skill-description">Efficient automation and system administration through shell scripting, command-line tools, and UNIX/Linux environments.</p>
+                            <div class="skill-badges mb-3">
+                                <span class="skill-badge shell">Bash</span>
+                                <span class="skill-badge shell">Linux</span>
+                                <span class="skill-badge shell">Automation</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 70%"></div>
+                                </div>
+                                <small class="text-muted">Intermediate</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-microchip fa-3x text-secondary mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">MIPS Assembly</h4>
+                            <p class="skill-description">Understanding of computer architecture fundamentals through MIPS assembly programming and low-level optimization techniques.</p>
+                            <div class="skill-badges mb-3">
+                                <span class="skill-badge assembly">MIPS</span>
+                                <span class="skill-badge assembly">Assembly</span>
+                                <span class="skill-badge assembly">Architecture</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-secondary" style="width: 65%"></div>
+                                </div>
+                                <small class="text-muted">Intermediate</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Development -->
+            <div class="skills-category mb-5">
+                <h2 class="section-title text-center mb-4">Web Development</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-react fa-3x text-info mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">React</h4>
+                            <p class="skill-description">Modern React development with hooks, state management, component lifecycle, and React Native for mobile applications.</p>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" style="width: 85%"></div>
+                                </div>
+                                <small class="text-muted">Advanced</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5 fa-3x text-danger mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">HTML5 & CSS3</h4>
+                            <p class="skill-description">Semantic HTML5, modern CSS3 features, responsive design, flexbox, grid, animations, and accessibility best practices.</p>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 90%"></div>
+                                </div>
+                                <small class="text-muted">Advanced</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap fa-3x text-primary mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">Bootstrap</h4>
+                            <p class="skill-description">Rapid prototyping and responsive design using Bootstrap framework for consistent, mobile-first web interfaces.</p>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" style="width: 85%"></div>
+                                </div>
+                                <small class="text-muted">Advanced</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Systems & Database -->
+            <div class="skills-category mb-5">
+                <h2 class="section-title text-center mb-4">Systems & Database</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database fa-3x text-warning mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">SQL/SQLite</h4>
+                            <p class="skill-description">Database design, complex queries, optimization, and data management.</p>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" style="width: 80%"></div>
+                                </div>
+                                <small class="text-muted">Proficient</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-network-wired fa-3x text-success mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">Network Programming</h4>
+                            <p class="skill-description">UDP/TCP protocols, socket programming, and network communication systems.</p>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 75%"></div>
+                                </div>
+                                <small class="text-muted">Proficient</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-cogs fa-3x text-info mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">POSIX Threads</h4>
+                            <p class="skill-description">Multithreading, synchronization, mutex locks, and parallel programming concepts.</p>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" style="width: 75%"></div>
+                                </div>
+                                <small class="text-muted">Proficient</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line fa-3x text-danger mb-3"></i>
+                            </div>
+                            <h4 class="skill-title">Algorithms</h4>
+                            <p class="skill-description">Data structures, graph algorithms, optimization, and computational complexity analysis.</p>
+                            <div class="skill-level">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 85%"></div>
+                                </div>
+                                <small class="text-muted">Advanced</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Currently Learning -->
+            <div class="skills-category mb-5">
+                <h2 class="section-title text-center mb-4">Currently Learning</h2>
+                <div class="learning-section text-center">
+                    <p class="lead mb-4">Continuously expanding my skillset with emerging technologies</p>
+                    <div class="skill-badges justify-content-center">
+                        <span class="skill-badge learning">
+                            <i class="fab fa-node-js me-2"></i>Node.js
+                        </span>
+                        <span class="skill-badge learning">
+                            <i class="fab fa-docker me-2"></i>Docker
+                        </span>
+                        <span class="skill-badge learning">
+                            <i class="fab fa-aws me-2"></i>AWS
+                        </span>
+                        <span class="skill-badge learning">
+                            <i class="fas fa-code me-2"></i>TypeScript
+                        </span>
+                        <span class="skill-badge learning">
+                            <i class="fas fa-cube me-2"></i>GraphQL
+                        </span>
+                        <span class="skill-badge learning">
+                            <i class="fab fa-git-alt me-2"></i>Advanced Git
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skills-category">
+                <h2 class="section-title text-center mb-4">Professional Skills</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="soft-skill-card">
+                            <i class="fas fa-lightbulb fa-2x text-warning mb-3"></i>
+                            <h5>Problem Solving</h5>
+                            <p>Analytical thinking and creative solutions to complex technical challenges</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="soft-skill-card">
+                            <i class="fas fa-users fa-2x text-primary mb-3"></i>
+                            <h5>Team Collaboration</h5>
+                            <p>Effective communication and collaboration in diverse, international teams</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="soft-skill-card">
+                            <i class="fas fa-rocket fa-2x text-success mb-3"></i>
+                            <h5>Agile Methodology</h5>
+                            <p>Experience with agile development practices and iterative project management</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="soft-skill-card">
+                            <i class="fas fa-book fa-2x text-info mb-3"></i>
+                            <h5>Continuous Learning</h5>
+                            <p>Passion for staying updated with latest technologies and best practices</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="soft-skill-card">
+                            <i class="fas fa-globe fa-2x text-danger mb-3"></i>
+                            <h5>Cross-Cultural Perspective</h5>
+                            <p>International experience bringing diverse approaches to problem-solving</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="soft-skill-card">
+                            <i class="fas fa-clock fa-2x text-secondary mb-3"></i>
+                            <h5>Time Management</h5>
+                            <p>Efficient project planning and deadline management in fast-paced environments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center mb-5">
+            <div class="cta-section">
+                <h3 class="h4 mb-3">Want to see these skills in action?</h3>
+                <p class="mb-4">Explore my projects to see how I apply these technologies to solve real-world problems</p>
+                <div class="action-buttons">
+                    <a href="projects.html" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-eye me-2"></i>View Projects
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Let's Talk
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-light text-center py-4 mt-5">
+        <div class="container">
+            <div class="social-links mb-3">
+                <a href="https://linkedin.com/in/charliewcullen" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/charlieijk" target="_blank" class="social-link">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="mailto:charliewcullen@gmail.com" class="social-link">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+            </div>
+            <p class="mb-0">&copy; 2025 Charlie Cullen's Portfolio. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="updated-script.js"></script>
+</body>
+</html>

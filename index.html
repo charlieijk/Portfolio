@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlie Cullen - Full-Stack Developer Portfolio</title>
+    <meta name="description"
+        content="Charlie Cullen's portfolio - Computer Science graduate, Full-Stack Developer specializing in JavaScript frameworks, Python, and modern web technologies.">
+    <meta property="og:title" content="Charlie Cullen - Full-Stack Developer Portfolio">
+    <meta property="og:description"
+        content="Explore Charlie's projects, skills, and journey from San Francisco to Ireland and back.">
+    <meta property="og:type" content="website">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="updated-styles.css">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn" class="btn btn-outline-primary btn-sm">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <i class="fas fa-code me-2"></i>Charlie Cullen
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main" class="container mt-5">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section mb-5 text-center">
+            <div class="hero-content">
+                <h1 class="display-3 mb-4 fade-in">Hello, I'm <span class="text-gradient">Charlie Cullen</span></h1>
+                <p class="lead mb-4 fade-in-delay">
+                    <span class="typing-effect">Full-Stack Developer</span>
+                </p>
+                <p class="mb-5 fade-in-delay-2">
+                    Computer Science graduate with international perspective, passionate about creating innovative
+                    solutions with modern web technologies.
+                </p>
+                <div class="hero-buttons fade-in-delay-3">
+                    <a href="projects.html" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-eye me-2"></i>View My Work
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats-section mb-5">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <h4>7+</h4>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <h4>2.1</h4>
+                        <p>Upper Second-Class Honors</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <h4>8+</h4>
+                        <p>Technologies Mastered</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <h4>2</h4>
+                        <p>Countries Studied In</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Preview Section -->
+        <section id="about-preview" class="section-padding mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">About Me</h2>
+                    <p class="lead mb-4">
+                        I'm a Computer Science graduate with a unique international perspective, having studied in both
+                        San Francisco and Cork, Ireland.
+                    </p>
+                    <p>
+                        My journey led me from considering business studies to discovering my true passion for
+                        technology and software development. I specialize in full-stack development with expertise in
+                        modern JavaScript frameworks, Python, and systems programming.
+                    </p>
+                    <div class="mt-4">
+                        <a href="about.html" class="btn btn-primary">
+                            <i class="fas fa-user me-2"></i>Learn More About Me
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image-placeholder text-center">
+                        <i class="fas fa-user-circle fa-9x text-muted"></i>
+                        <p class="mt-3 text-muted">Professional photo coming soon</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Preview Section -->
+        <section id="skills-preview" class="section-padding mb-5">
+            <h2 class="section-title text-center mb-5">Technical Skills</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-code fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="skill-title">Programming Languages</h3>
+                        <p class="skill-description">
+                            Proficient in Python, JavaScript, Java, C, Shell scripting, and MIPS Assembly
+                        </p>
+                        <div class="skill-badges">
+                            <span class="skill-badge python">Python</span>
+                            <span class="skill-badge js">JavaScript</span>
+                            <span class="skill-badge java">Java</span>
+                            <span class="skill-badge c">C</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-globe fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="skill-title">Web Technologies</h3>
+                        <p class="skill-description">
+                            Modern web development with React, HTML5, CSS3, Bootstrap, Flask, and Jinja
+                        </p>
+                        <div class="skill-badges">
+                            <span class="skill-badge react">React</span>
+                            <span class="skill-badge html">HTML5</span>
+                            <span class="skill-badge css">CSS3</span>
+                            <span class="skill-badge bootstrap">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-database fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="skill-title">Systems & Database</h3>
+                        <p class="skill-description">
+                            Database management, system programming, networking, and algorithm implementation
+                        </p>
+                        <div class="skill-badges">
+                            <span class="skill-badge sql">SQL</span>
+                            <span class="skill-badge posix">POSIX</span>
+                            <span class="skill-badge networking">Networking</span>
+                            <span class="skill-badge algorithms">Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="skills.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-cogs me-2"></i>View All Skills
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects-preview" class="section-padding mb-5">
+            <h2 class="section-title text-center mb-5">Featured Projects</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div style="height: 250px; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-ship fa-4x"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="text-white text-center">
+                                    <h4>Atlantic Ocean Explorer</h4>
+                                    <p>Interactive Web Application</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Atlantic Ocean Explorer</h3>
+                                <span class="project-type">Web App</span>
+                            </div>
+                            <p class="project-description">
+                                Interactive web application exploring Atlantic Ocean features with advanced CSS animations and responsive design.
+                            </p>
+                            <div class="project-technologies">
+                                <span class="tech-badge html">HTML</span>
+                                <span class="tech-badge css">CSS</span>
+                                <span class="tech-badge js">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div style="height: 250px; background: var(--gradient-secondary); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-gamepad fa-4x"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="text-white text-center">
+                                    <h4>BizzarBazzar</h4>
+                                    <p>Quiz Game Platform</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">BizzarBazzar</h3>
+                                <span class="project-type">Full-Stack</span>
+                            </div>
+                            <p class="project-description">
+                                Full-stack quiz game with user management, score tracking, and dynamic question generation using Flask and SQLite.
+                            </p>
+                            <div class="project-technologies">
+                                <span class="tech-badge python">Python</span>
+                                <span class="tech-badge flask">Flask</span>
+                                <span class="tech-badge sql">SQLite</span>
+                                <span class="tech-badge html">HTML</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div style="height: 250px; background: var(--gradient-success); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-home fa-4x"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="text-white text-center">
+                                    <h4>Aunty Betty's Lair</h4>
+                                    <p>JavaScript Game</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Aunty Betty's Lair</h3>
+                                <span class="project-type">Game</span>
+                            </div>
+                            <p class="project-description">
+                                Interactive JavaScript game featuring AI opponents, multiplayer capabilities, and advanced game mechanics.
+                            </p>
+                            <div class="project-technologies">
+                                <span class="tech-badge js">JavaScript</span>
+                                <span class="tech-badge html">HTML</span>
+                                <span class="tech-badge css">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="projects.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-folder-open me-2"></i>View All Projects
+                </a>
+            </div>
+        </section>
+
+        <!-- Current Focus Section -->
+        <section id="focus" class="section-padding mb-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="focus-card text-center">
+                        <h2 class="section-title mb-4">Current Focus</h2>
+                        <p class="lead mb-4">
+                            🎯 <strong>Seeking Tech Internships</strong> - Currently looking for opportunities to apply my skills in a professional environment
+                        </p>
+                        <p class="mb-4">
+                            Having returned to San Francisco, I'm strengthening my technical foundation through additional coursework at City College while actively pursuing internship opportunities. My international education combined with hands-on project experience makes me ready to contribute to innovative teams.
+                        </p>
+                        <div class="focus-goals">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <i class="fas fa-rocket fa-2x text-primary mb-3"></i>
+                                    <p><span>Full-Stack Development</span><br>Building end-to-end applications</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <i class="fas fa-brain fa-2x text-primary mb-3"></i>
+                                    <p><span>System Design</span><br>Learning scalable architecture</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <i class="fas fa-users fa-2x text-primary mb-3"></i>
+                                    <p><span>Team Collaboration</span><br>Contributing to tech teams</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-light text-center py-4 mt-5">
+        <div class="container">
+            <div class="social-links mb-3">
+                <a href="https://linkedin.com/in/charliewcullen" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/charlieijk" target="_blank" class="social-link">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="mailto:charliewcullen@gmail.com" class="social-link">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+            </div>
+            <p class="mb-0">&copy; 2025 Charlie Cullen's Portfolio. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="updated-script.js"></script>
+</body>
+
+</html>
