@@ -315,6 +315,10 @@ body {
 .tech-badge.networking { background: #0066cc; color: white; }
 .tech-badge.algorithms { background: #ff6b6b; color: white; }
 .tech-badge.systems { background: #6c757d; color: white; }
+.tech-badge.cpp { background: #00599c; color: white; }
+.tech-badge.java { background: #f89820; color: white; }
+.tech-badge.react { background: #61dafb; color: white; }
+.skill-badge.cpp { background: linear-gradient(135deg, #00599c, #004482); color: white; }
 
 /* Learning Badges */
 .skill-badge.learning { 
