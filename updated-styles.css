@@ -290,6 +290,7 @@ body {
 .skill-badge.posix { background: linear-gradient(135deg, #fcc624, #f4a73e); color: #333; }
 .skill-badge.networking { background: linear-gradient(135deg, #0066cc, #004499); color: white; }
 .skill-badge.algorithms { background: linear-gradient(135deg, #ff6b6b, #ee5a52); color: white; }
+.skill-badge.ml { background: linear-gradient(135deg, #ff9800, #f57c00); color: white; }
 
 /* Tech Badge Colors */
 .tech-badge {
@@ -318,6 +319,7 @@ body {
 .tech-badge.cpp { background: #00599c; color: white; }
 .tech-badge.java { background: #f89820; color: white; }
 .tech-badge.react { background: #61dafb; color: white; }
+.tech-badge.ml { background: #ff9800; color: white; }
 .skill-badge.cpp { background: linear-gradient(135deg, #00599c, #004482); color: white; }
 
 /* Learning Badges */

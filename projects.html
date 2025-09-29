@@ -79,6 +79,9 @@
 
                     <input type="radio" class="btn-check" name="project-filter" id="game-projects" autocomplete="off">
                     <label class="btn btn-outline-primary" for="game-projects">Games</label>
+
+                    <input type="radio" class="btn-check" name="project-filter" id="ml-projects" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="ml-projects">Machine Learning</label>
                 </div>
             </div>
         </section>
@@ -86,6 +89,106 @@
         <!-- Projects Grid -->
         <section id="projects" class="section-padding">
             <div class="row">
+                <!-- Predictive Stock Price Analysis -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item ml-project">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div style="height: 250px; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-chart-line fa-4x"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="text-white text-center">
+                                    <h4>Predictive Stock Analysis</h4>
+                                    <p>Time Series Forecasting with ML</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Predictive Stock Price Analysis</h3>
+                                <span class="project-type">Machine Learning</span>
+                            </div>
+                            <p class="project-description">
+                                Advanced ML models to predict stock price movements using historical market data and technical indicators. Implemented LSTM neural networks compared against Linear Regression and Random Forest algorithms with interactive dashboard.
+                            </p>
+                            <div class="project-technologies">
+                                <span class="tech-badge python">Python</span>
+                                <span class="tech-badge ml">pandas</span>
+                                <span class="tech-badge ml">scikit-learn</span>
+                                <span class="tech-badge ml">LSTM</span>
+                                <span class="tech-badge ml">yfinance API</span>
+                                <span class="tech-badge ml">matplotlib</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real-time Sentiment Analysis -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item ml-project">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div style="height: 250px; background: linear-gradient(135deg, #4facfe, #00f2fe); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-brain fa-4x"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="text-white text-center">
+                                    <h4>Sentiment Analysis System</h4>
+                                    <p>Real-time Social Media NLP</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Real-time Sentiment Analysis</h3>
+                                <span class="project-type">Machine Learning</span>
+                            </div>
+                            <p class="project-description">
+                                NLP pipeline to classify social media sentiment using multiple ML approaches (Naive Bayes, SVM, Neural Networks). Features real-time data streaming and React frontend with A/B testing framework.
+                            </p>
+                            <div class="project-technologies">
+                                <span class="tech-badge python">Python</span>
+                                <span class="tech-badge ml">NLTK/spaCy</span>
+                                <span class="tech-badge ml">scikit-learn</span>
+                                <span class="tech-badge ml">Twitter API</span>
+                                <span class="tech-badge react">React</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computer Vision Code Assessment -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item ml-project">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div style="height: 250px; background: linear-gradient(135deg, #f093fb, #f5576c); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-eye fa-4x"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="text-white text-center">
+                                    <h4>Computer Vision System</h4>
+                                    <p>Automated Code Quality Assessment</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Computer Vision Code Assessment</h3>
+                                <span class="project-type">Machine Learning</span>
+                            </div>
+                            <p class="project-description">
+                                Computer vision system to analyze programming code screenshots and detect common coding errors. Features OCR preprocessing pipeline and trained ML models for automated code review with educational feedback system.
+                            </p>
+                            <div class="project-technologies">
+                                <span class="tech-badge python">Python</span>
+                                <span class="tech-badge ml">OpenCV</span>
+                                <span class="tech-badge ml">TensorFlow</span>
+                                <span class="tech-badge ml">PyTorch</span>
+                                <span class="tech-badge flask">Flask API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Atlantic Ocean Explorer -->
                 <div class="col-lg-4 col-md-6 mb-4 project-item web-project">
                     <div class="project-card">
@@ -696,6 +799,11 @@
                         <span class="skill-badge posix">POSIX</span>
                         <span class="skill-badge networking">Networking</span>
                         <span class="skill-badge algorithms">Algorithms</span>
+                        <span class="skill-badge ml">Machine Learning</span>
+                        <span class="skill-badge ml">TensorFlow</span>
+                        <span class="skill-badge ml">PyTorch</span>
+                        <span class="skill-badge ml">NLTK</span>
+                        <span class="skill-badge ml">OpenCV</span>
                     </div>
                     <div class="mt-4">
                         <a href="skills.html" class="btn btn-primary me-3">
@@ -751,6 +859,8 @@
                         } else if (filter === 'algorithm-projects' && item.classList.contains('algorithm-project')) {
                             item.style.display = 'block';
                         } else if (filter === 'game-projects' && item.classList.contains('game-project')) {
+                            item.style.display = 'block';
+                        } else if (filter === 'ml-projects' && item.classList.contains('ml-project')) {
                             item.style.display = 'block';
                         } else {
                             item.style.display = 'none';
