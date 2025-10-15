@@ -652,14 +652,14 @@ document.addEventListener('DOMContentLoaded', function() {
     new AccessibilityManager();
 
     // Initialize typing effect on homepage
-    const typingElement = document.querySelector('.typing-effect');
-    if (typingElement) {
-        new TypingEffect(typingElement, [
-            'Full-Stack Developer',
-            'Computer Science Graduate',
-            'Tech Enthusiast'
-        ], 150);
-    }
+    // const typingElement = document.querySelector('.typing-effect');
+    // if (typingElement) {
+    //     new TypingEffect(typingElement, [
+    //         'Full-Stack Developer',
+    //         'Computer Science Graduate',
+    //         'Tech Enthusiast'
+    //     ], 150);
+    // }
 
     // Add loading complete class
     setTimeout(() => {
