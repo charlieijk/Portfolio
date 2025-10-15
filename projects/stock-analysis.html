@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Stock Price Analysis - Charlie Cullen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">charlieijk's portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../projects.html">All Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="hero" style="padding-top: 100px; padding-bottom: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 mb-3">Predictive Stock Price Analysis</h1>
+                    <p class="lead mb-4">Advanced Machine Learning for Financial Forecasting</p>
+                    <div class="mb-4">
+                        <span class="badge bg-primary me-2">Python</span>
+                        <span class="badge bg-primary me-2">LSTM</span>
+                        <span class="badge bg-primary me-2">scikit-learn</span>
+                        <span class="badge bg-primary me-2">pandas</span>
+                        <span class="badge bg-primary me-2">yfinance API</span>
+                        <span class="badge bg-primary me-2">matplotlib</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Overview -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-info-circle me-2"></i>Project Overview</h3>
+                            <p>This project implements advanced machine learning models to predict stock price movements using historical market data and technical indicators. The system compares multiple ML approaches including LSTM neural networks, Linear Regression, and Random Forest algorithms, providing an interactive dashboard for visualization and analysis.</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-star me-2"></i>Key Features</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>LSTM neural network implementation for time series forecasting</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Multiple ML algorithm comparison (LSTM vs Linear Regression vs Random Forest)</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Real-time stock data fetching using yfinance API</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Technical indicators calculation and feature engineering</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Interactive visualization dashboard with matplotlib</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Model performance metrics and accuracy evaluation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-code me-2"></i>Technical Implementation</h3>
+                            <h5 class="mt-4">Architecture</h5>
+                            <p>The project uses a multi-layered approach combining data preprocessing, feature engineering, model training, and evaluation:</p>
+                            <ul>
+                                <li><strong>Data Collection:</strong> Automated fetching of historical stock data via yfinance API</li>
+                                <li><strong>Preprocessing:</strong> Data cleaning, normalization, and sequence generation for LSTM</li>
+                                <li><strong>Feature Engineering:</strong> Technical indicators including moving averages, RSI, MACD</li>
+                                <li><strong>Model Training:</strong> LSTM with dropout layers, compared against baseline models</li>
+                                <li><strong>Evaluation:</strong> MSE, RMSE, and directional accuracy metrics</li>
+                            </ul>
+
+                            <h5 class="mt-4">Technologies Used</h5>
+                            <ul>
+                                <li><strong>Python:</strong> Core programming language</li>
+                                <li><strong>TensorFlow/Keras:</strong> LSTM neural network implementation</li>
+                                <li><strong>scikit-learn:</strong> Traditional ML algorithms and preprocessing</li>
+                                <li><strong>pandas:</strong> Data manipulation and analysis</li>
+                                <li><strong>NumPy:</strong> Numerical computations</li>
+                                <li><strong>matplotlib/seaborn:</strong> Data visualization</li>
+                                <li><strong>yfinance:</strong> Stock market data API</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-lightbulb me-2"></i>Challenges & Solutions</h3>
+                            <div class="mb-3">
+                                <h5>Challenge: Overfitting in LSTM Model</h5>
+                                <p><strong>Solution:</strong> Implemented dropout layers, early stopping, and regularization techniques to improve model generalization.</p>
+                            </div>
+                            <div class="mb-3">
+                                <h5>Challenge: Feature Selection</h5>
+                                <p><strong>Solution:</strong> Used correlation analysis and feature importance metrics to identify the most predictive technical indicators.</p>
+                            </div>
+                            <div>
+                                <h5>Challenge: Real-time Data Integration</h5>
+                                <p><strong>Solution:</strong> Built a robust data pipeline with error handling for API rate limits and missing data.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What I Learned -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-graduation-cap me-2"></i>What I Learned</h3>
+                            <ul>
+                                <li>Deep understanding of LSTM architecture and sequence modeling</li>
+                                <li>Practical experience with financial time series analysis</li>
+                                <li>Model comparison and performance evaluation techniques</li>
+                                <li>API integration and data pipeline development</li>
+                                <li>The importance of feature engineering in ML performance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <h3 class="card-title mb-4">Project Links</h3>
+                            <a href="https://github.com/charlieijk" target="_blank" class="btn btn-primary btn-lg me-3">
+                                <i class="fab fa-github me-2"></i>View on GitHub
+                            </a>
+                            <a href="../projects.html" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Charlie Cullen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

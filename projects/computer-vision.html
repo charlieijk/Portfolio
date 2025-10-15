@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Vision Code Assessment - Charlie Cullen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">charlieijk's portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../projects.html">All Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="hero" style="padding-top: 100px; padding-bottom: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 mb-3">Computer Vision Code Assessment</h1>
+                    <p class="lead mb-4">Automated Code Quality Analysis Using Machine Learning</p>
+                    <div class="mb-4">
+                        <span class="badge bg-primary me-2">Python</span>
+                        <span class="badge bg-primary me-2">OpenCV</span>
+                        <span class="badge bg-primary me-2">TensorFlow</span>
+                        <span class="badge bg-primary me-2">PyTorch</span>
+                        <span class="badge bg-primary me-2">Flask API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Overview -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-info-circle me-2"></i>Project Overview</h3>
+                            <p>An innovative computer vision system that analyzes programming code screenshots to automatically detect common coding errors and provide educational feedback. The system combines OCR preprocessing with trained ML models to identify syntax errors, style violations, and logical mistakes in code images.</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-star me-2"></i>Key Features</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Advanced OCR preprocessing pipeline for code extraction</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Deep learning models trained on code error patterns</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Multi-language support (Python, Java, C, JavaScript)</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Syntax error detection and classification</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Educational feedback system with explanations</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>RESTful API for integration with educational platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-code me-2"></i>Technical Implementation</h3>
+                            <h5 class="mt-4">Computer Vision Pipeline</h5>
+                            <ul>
+                                <li><strong>Image Preprocessing:</strong> Deskewing, noise reduction, contrast enhancement</li>
+                                <li><strong>Text Detection:</strong> Custom-trained EAST model for code region detection</li>
+                                <li><strong>OCR:</strong> Tesseract OCR with custom code-optimized configurations</li>
+                                <li><strong>Post-processing:</strong> Code formatting correction and syntax restoration</li>
+                            </ul>
+
+                            <h5 class="mt-4">ML Architecture</h5>
+                            <ul>
+                                <li><strong>Error Detection Model:</strong> CNN-based architecture for identifying error patterns</li>
+                                <li><strong>Classification:</strong> Multi-class classifier for error type categorization</li>
+                                <li><strong>Training Data:</strong> Custom dataset of 10,000+ code screenshots with annotations</li>
+                                <li><strong>Frameworks:</strong> TensorFlow for production, PyTorch for experimentation</li>
+                            </ul>
+
+                            <h5 class="mt-4">API Design</h5>
+                            <ul>
+                                <li><strong>Flask RESTful API</strong> with authentication and rate limiting</li>
+                                <li><strong>Endpoints:</strong> Image upload, error analysis, batch processing</li>
+                                <li><strong>Response Format:</strong> JSON with detected errors, confidence scores, suggestions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-lightbulb me-2"></i>Challenges & Solutions</h3>
+                            <div class="mb-3">
+                                <h5>Challenge: OCR Accuracy for Code</h5>
+                                <p><strong>Solution:</strong> Fine-tuned Tesseract with code-specific character sets and implemented custom post-processing to fix common OCR errors in programming syntax.</p>
+                            </div>
+                            <div class="mb-3">
+                                <h5>Challenge: Handling Different Code Styles</h5>
+                                <p><strong>Solution:</strong> Built a normalization layer that standardizes different indentation styles and formatting conventions before analysis.</p>
+                            </div>
+                            <div>
+                                <h5>Challenge: Training Data Collection</h5>
+                                <p><strong>Solution:</strong> Created a synthetic data generator that produces code screenshots with programmatically inserted errors, augmented with real student submissions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What I Learned -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-graduation-cap me-2"></i>What I Learned</h3>
+                            <ul>
+                                <li>Deep understanding of OCR systems and preprocessing techniques</li>
+                                <li>Computer vision model training and optimization</li>
+                                <li>Data augmentation strategies for specialized domains</li>
+                                <li>Building production-ready ML APIs with Flask</li>
+                                <li>Working with both TensorFlow and PyTorch frameworks</li>
+                                <li>Creating educational systems that provide constructive feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <h3 class="card-title mb-4">Project Links</h3>
+                            <a href="https://github.com/charlieijk" target="_blank" class="btn btn-primary btn-lg me-3">
+                                <i class="fab fa-github me-2"></i>View on GitHub
+                            </a>
+                            <a href="../projects.html" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Charlie Cullen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

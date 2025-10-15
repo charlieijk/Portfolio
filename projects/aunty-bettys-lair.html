@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aunty Betty's Lair - Charlie Cullen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">charlieijk's portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../projects.html">All Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="hero" style="padding-top: 100px; padding-bottom: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 mb-3">Aunty Betty's Lair</h1>
+                    <p class="lead mb-4">Interactive JavaScript Adventure Game</p>
+                    <div class="mb-4">
+                        <span class="badge bg-primary me-2">JavaScript</span>
+                        <span class="badge bg-primary me-2">HTML5</span>
+                        <span class="badge bg-primary me-2">CSS3</span>
+                        <span class="badge bg-primary me-2">Game AI</span>
+                    </div>
+                    <a href="https://github.com/charlieijk/AuntyBettysLair" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github me-2"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Overview -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-info-circle me-2"></i>Project Overview</h3>
+                            <p>An engaging browser-based adventure game built entirely with vanilla JavaScript. Players navigate through Aunty Betty's mysterious lair, facing AI opponents, managing inventory, and solving puzzles. The game features complex mechanics including pathfinding AI, multiplayer support, and a rich storyline.</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-star me-2"></i>Key Features</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>AI opponents with pathfinding algorithms</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Dynamic inventory management system</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Multiplayer support with turn-based mechanics</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Interactive puzzle-solving elements</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Save/load game state functionality</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Responsive design for mobile and desktop</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-code me-2"></i>Technical Implementation</h3>
+                            <h5 class="mt-4">Game Architecture</h5>
+                            <ul>
+                                <li><strong>Game Loop:</strong> Efficient rendering loop with requestAnimationFrame</li>
+                                <li><strong>State Management:</strong> Custom state machine for game phases</li>
+                                <li><strong>Event System:</strong> Pub/sub pattern for loose coupling</li>
+                                <li><strong>AI System:</strong> A* pathfinding with behavior trees</li>
+                            </ul>
+
+                            <h5 class="mt-4">Technologies</h5>
+                            <ul>
+                                <li><strong>Vanilla JavaScript:</strong> No frameworks, pure ES6+</li>
+                                <li><strong>Canvas API:</strong> For game rendering</li>
+                                <li><strong>LocalStorage:</strong> Game state persistence</li>
+                                <li><strong>CSS Grid:</strong> Responsive UI layout</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-lightbulb me-2"></i>Challenges & Solutions</h3>
+                            <div class="mb-3">
+                                <h5>Challenge: AI Pathfinding Performance</h5>
+                                <p><strong>Solution:</strong> Implemented A* with heuristic optimization and path caching to reduce computation.</p>
+                            </div>
+                            <div class="mb-3">
+                                <h5>Challenge: Managing Complex Game State</h5>
+                                <p><strong>Solution:</strong> Created a centralized state management system with immutable updates and state history.</p>
+                            </div>
+                            <div>
+                                <h5>Challenge: Multiplayer Synchronization</h5>
+                                <p><strong>Solution:</strong> Implemented turn-based system with state validation to ensure consistency.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What I Learned -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-graduation-cap me-2"></i>What I Learned</h3>
+                            <ul>
+                                <li>Game development patterns and architecture</li>
+                                <li>Implementing AI pathfinding algorithms</li>
+                                <li>Event-driven programming in JavaScript</li>
+                                <li>Performance optimization for browser games</li>
+                                <li>State management in complex applications</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <h3 class="card-title mb-4">Project Links</h3>
+                            <a href="https://github.com/charlieijk/AuntyBettysLair" target="_blank" class="btn btn-primary btn-lg me-3">
+                                <i class="fab fa-github me-2"></i>View on GitHub
+                            </a>
+                            <a href="../projects.html" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Charlie Cullen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
