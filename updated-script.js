@@ -1,6 +1,7 @@
 // Enhanced Portfolio JavaScript with Modern Features
 
 // Theme Management
+
 class ThemeManager {
     constructor() {
         this.currentTheme = localStorage.getItem('theme') || 'light';
@@ -655,8 +656,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typingElement) {
         new TypingEffect(typingElement, [
             'Full-Stack Developer',
-            'Computer Science Graduate', 
-            'Problem Solver',
+            'Computer Science Graduate',
             'Tech Enthusiast'
         ], 150);
     }
