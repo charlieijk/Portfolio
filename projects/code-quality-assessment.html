@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quality Assessment - Charlie Cullen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">charlieijk's portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../projects.html">All Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="hero" style="padding-top: 100px; padding-bottom: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 mb-3">Code Quality Assessment</h1>
+                    <p class="lead mb-4">Automated Tool for Analyzing and Improving Code Quality</p>
+                    <div class="mb-4">
+                        <span class="badge bg-primary me-2">Python</span>
+                        <span class="badge bg-primary me-2">Code Analysis</span>
+                        <span class="badge bg-primary me-2">Quality Metrics</span>
+                        <span class="badge bg-primary me-2">AST</span>
+                        <span class="badge bg-primary me-2">Static Analysis</span>
+                    </div>
+                    <a href="https://github.com/charlieijk/CodeQualityAssessment" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github me-2"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Overview -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-info-circle me-2"></i>Project Overview</h3>
+                            <p>This project provides an automated code quality assessment tool that analyzes Python codebases for style violations, complexity metrics, and best practice adherence. It generates comprehensive reports with actionable recommendations to improve code maintainability and readability.</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-star me-2"></i>Key Features</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Static code analysis using AST parsing</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Complexity metrics calculation (cyclomatic complexity, maintainability index)</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>PEP 8 style checking and enforcement</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Code smell detection and reporting</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Detailed HTML/JSON report generation</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Integration with CI/CD pipelines</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-code me-2"></i>Technical Implementation</h3>
+                            <h5 class="mt-4">Architecture</h5>
+                            <p>The tool uses a modular architecture for analyzing different aspects of code quality:</p>
+                            <ul>
+                                <li><strong>Parser Module:</strong> AST-based code parsing and tree traversal</li>
+                                <li><strong>Analyzer Module:</strong> Metrics calculation and pattern detection</li>
+                                <li><strong>Reporter Module:</strong> Report generation in multiple formats</li>
+                                <li><strong>CLI Interface:</strong> Command-line tool for easy integration</li>
+                            </ul>
+
+                            <h5 class="mt-4">Technologies Used</h5>
+                            <ul>
+                                <li><strong>Python AST:</strong> Abstract Syntax Tree parsing</li>
+                                <li><strong>pylint/flake8:</strong> Style checking integration</li>
+                                <li><strong>radon:</strong> Complexity metrics calculation</li>
+                                <li><strong>Jinja2:</strong> HTML report templating</li>
+                                <li><strong>argparse:</strong> Command-line interface</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-lightbulb me-2"></i>Challenges & Solutions</h3>
+                            <div class="mb-3">
+                                <h5>Challenge: Handling Large Codebases</h5>
+                                <p><strong>Solution:</strong> Implemented parallel processing and incremental analysis to handle projects with thousands of files efficiently.</p>
+                            </div>
+                            <div class="mb-3">
+                                <h5>Challenge: False Positive Reduction</h5>
+                                <p><strong>Solution:</strong> Developed configurable rule sets and context-aware analysis to reduce noise in reports.</p>
+                            </div>
+                            <div>
+                                <h5>Challenge: Report Clarity</h5>
+                                <p><strong>Solution:</strong> Created visual dashboards with severity levels and prioritized recommendations for better actionability.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What I Learned -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-graduation-cap me-2"></i>What I Learned</h3>
+                            <ul>
+                                <li>Deep understanding of Python AST and metaprogramming</li>
+                                <li>Software quality metrics and their practical applications</li>
+                                <li>Design patterns for building extensible analysis tools</li>
+                                <li>Best practices for code maintainability and readability</li>
+                                <li>CLI tool development and user experience design</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <h3 class="card-title mb-4">Project Links</h3>
+                            <a href="https://github.com/charlieijk/CodeQualityAssessment" target="_blank" class="btn btn-primary btn-lg me-3">
+                                <i class="fab fa-github me-2"></i>View on GitHub
+                            </a>
+                            <a href="../projects.html" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Charlie Cullen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

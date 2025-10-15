@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Cavern Adventure - Charlie Cullen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">charlieijk's portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../projects.html">All Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="hero" style="padding-top: 100px; padding-bottom: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 mb-3">Crystal Cavern Adventure</h1>
+                    <p class="lead mb-4">Exploration-Based Puzzle Adventure Game</p>
+                    <div class="mb-4">
+                        <span class="badge bg-primary me-2">Java</span>
+                        <span class="badge bg-primary me-2">Adventure</span>
+                        <span class="badge bg-primary me-2">Puzzle</span>
+                        <span class="badge bg-primary me-2">2D Graphics</span>
+                        <span class="badge bg-primary me-2">Resource Management</span>
+                    </div>
+                    <a href="https://github.com/charlieijk/CrystalCavernAdventure" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github me-2"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Overview -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-info-circle me-2"></i>Project Overview</h3>
+                            <p>An immersive exploration-based adventure game set in mysterious crystal caverns. Players navigate through intricate cave systems, solve environmental puzzles, manage resources like light and oxygen, and uncover the secrets hidden within the glowing crystal formations while avoiding hazards and discovering hidden treasures.</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-star me-2"></i>Key Features</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Multi-level cave exploration with interconnected areas</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Environmental puzzle solving using items and mechanics</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Resource management system (light, oxygen, health)</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Dynamic lighting effects and crystal illumination</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Hidden areas and collectible crystals</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Atmospheric sound design and ambient music</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-code me-2"></i>Technical Implementation</h3>
+                            <h5 class="mt-4">Architecture</h5>
+                            <p>The game uses a scene-based architecture with state management for different areas:</p>
+                            <ul>
+                                <li><strong>Scene Manager:</strong> Handles transitions between cave areas and loading</li>
+                                <li><strong>Puzzle Engine:</strong> Manages interactive objects and solution validation</li>
+                                <li><strong>Resource System:</strong> Tracks and updates player resources over time</li>
+                                <li><strong>Lighting Engine:</strong> Dynamic light sources and shadow rendering</li>
+                                <li><strong>Inventory System:</strong> Item collection and usage mechanics</li>
+                            </ul>
+
+                            <h5 class="mt-4">Technologies Used</h5>
+                            <ul>
+                                <li><strong>Java:</strong> Core game programming language</li>
+                                <li><strong>Swing/Graphics2D:</strong> 2D graphics rendering</li>
+                                <li><strong>Tile-based System:</strong> Level design and collision detection</li>
+                                <li><strong>Java Sound API:</strong> Music and sound effects</li>
+                                <li><strong>Custom Lighting:</strong> Radial gradient-based illumination</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-lightbulb me-2"></i>Challenges & Solutions</h3>
+                            <div class="mb-3">
+                                <h5>Challenge: Dynamic Lighting Performance</h5>
+                                <p><strong>Solution:</strong> Implemented a spatial partitioning system to only render lights affecting visible areas, and used buffered rendering techniques for smooth performance.</p>
+                            </div>
+                            <div class="mb-3">
+                                <h5>Challenge: Puzzle Design Balance</h5>
+                                <p><strong>Solution:</strong> Created a difficulty progression system with hints and multiple solution paths to ensure puzzles are challenging but not frustrating.</p>
+                            </div>
+                            <div>
+                                <h5>Challenge: Resource Management Feel</h5>
+                                <p><strong>Solution:</strong> Tuned resource depletion rates through playtesting to create tension without making the game overly punishing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What I Learned -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-graduation-cap me-2"></i>What I Learned</h3>
+                            <ul>
+                                <li>Game design principles for exploration and puzzle mechanics</li>
+                                <li>Dynamic lighting systems and performance optimization</li>
+                                <li>Tile-based level design and collision systems</li>
+                                <li>Resource management gameplay mechanics</li>
+                                <li>Atmosphere creation through audio and visual design</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <h3 class="card-title mb-4">Project Links</h3>
+                            <a href="https://github.com/charlieijk/CrystalCavernAdventure" target="_blank" class="btn btn-primary btn-lg me-3">
+                                <i class="fab fa-github me-2"></i>View on GitHub
+                            </a>
+                            <a href="../projects.html" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Charlie Cullen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

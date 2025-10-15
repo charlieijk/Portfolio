@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Game - Charlie Cullen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">charlieijk's portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../projects.html">All Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="hero" style="padding-top: 100px; padding-bottom: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 mb-3">Ludo Game</h1>
+                    <p class="lead mb-4">Classic Board Game with AI Opponents</p>
+                    <div class="mb-4">
+                        <span class="badge bg-primary me-2">Java</span>
+                        <span class="badge bg-primary me-2">Game AI</span>
+                        <span class="badge bg-primary me-2">Multiplayer</span>
+                        <span class="badge bg-primary me-2">Swing</span>
+                        <span class="badge bg-primary me-2">Strategy</span>
+                    </div>
+                    <a href="https://github.com/charlieijk/LudoGame" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github me-2"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Overview -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-info-circle me-2"></i>Project Overview</h3>
+                            <p>A complete implementation of the classic Ludo board game featuring both local multiplayer and AI opponents. The game includes all traditional Ludo rules, intelligent computer players with varying difficulty levels, and a polished graphical interface with animations and sound effects.</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-star me-2"></i>Key Features</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>2-4 player support with mix of human and AI players</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Three AI difficulty levels (Easy, Medium, Hard)</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Full Ludo ruleset implementation including safe zones and captures</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Animated piece movement and dice rolling</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Game state save/load functionality</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Statistics tracking and leaderboard</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-code me-2"></i>Technical Implementation</h3>
+                            <h5 class="mt-4">Architecture</h5>
+                            <p>The game uses a Model-View-Controller architecture for clean separation of concerns:</p>
+                            <ul>
+                                <li><strong>Game Engine:</strong> Core logic handling rules, turns, and win conditions</li>
+                                <li><strong>AI System:</strong> Minimax algorithm with heuristic evaluation functions</li>
+                                <li><strong>Board Manager:</strong> Position tracking and valid move calculation</li>
+                                <li><strong>GUI Layer:</strong> Swing-based interface with custom graphics</li>
+                                <li><strong>Animation System:</strong> Smooth piece movement and visual effects</li>
+                            </ul>
+
+                            <h5 class="mt-4">Technologies Used</h5>
+                            <ul>
+                                <li><strong>Java:</strong> Core programming language with Java 8 features</li>
+                                <li><strong>Swing/AWT:</strong> GUI framework and graphics rendering</li>
+                                <li><strong>Minimax Algorithm:</strong> AI decision-making</li>
+                                <li><strong>Threading:</strong> Smooth animations and AI computation</li>
+                                <li><strong>Java Sound API:</strong> Sound effects and music</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-lightbulb me-2"></i>Challenges & Solutions</h3>
+                            <div class="mb-3">
+                                <h5>Challenge: AI Strategy Implementation</h5>
+                                <p><strong>Solution:</strong> Developed heuristic evaluation functions considering piece safety, progress toward home, and strategic blocking opportunities.</p>
+                            </div>
+                            <div class="mb-3">
+                                <h5>Challenge: Complex Rule Handling</h5>
+                                <p><strong>Solution:</strong> Created a state machine to handle all game rules including special cases like mandatory captures and bonus rolls.</p>
+                            </div>
+                            <div>
+                                <h5>Challenge: Smooth Animations</h5>
+                                <p><strong>Solution:</strong> Implemented a custom animation framework using timers and interpolation for fluid piece movement along the board path.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What I Learned -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-graduation-cap me-2"></i>What I Learned</h3>
+                            <ul>
+                                <li>Game AI development using minimax and heuristic evaluation</li>
+                                <li>State machine design for complex game rules</li>
+                                <li>GUI programming and custom graphics rendering</li>
+                                <li>Animation techniques for smooth user experience</li>
+                                <li>Turn-based game architecture and multiplayer support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <h3 class="card-title mb-4">Project Links</h3>
+                            <a href="https://github.com/charlieijk/LudoGame" target="_blank" class="btn btn-primary btn-lg me-3">
+                                <i class="fab fa-github me-2"></i>View on GitHub
+                            </a>
+                            <a href="../projects.html" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Charlie Cullen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
