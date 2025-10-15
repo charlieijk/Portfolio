@@ -1,357 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>charlieijk's portfolio</title>
-    <meta name="description"
-        content="Charlie Cullen's portfolio - Computer Science student, Full-Stack Developer specializing in JavaScript frameworks, Python, and modern web technologies.">
-    <meta property="og:title" content="Charlie Cullen - Full-Stack Developer Portfolio">
-    <meta property="og:description"
-        content="Explore Charlie's projects, skills, and journey from San Francisco to Ireland and back.">
-    <meta property="og:type" content="website">
+    <title>Charlie Cullen - Portfolio</title>
+    <meta name="description" content="Charlie Cullen's portfolio - Computer Science student and Full-Stack Developer">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="updated-styles.css">
-    <link rel="icon" type="image/x-icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Dark Mode Toggle -->
-    <div class="theme-toggle">
-        <button id="theme-toggle-btn" class="btn btn-outline-primary btn-sm">
-            <i class="fas fa-moon"></i>
-        </button>
-    </div>
-
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">
-                    <i class="fas fa-code me-2"></i>charlie cullen's portfolio
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                    </ul>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Charlie Cullen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main id="main" class="container mt-5">
-        <!-- Hero Section -->
-        <section id="home" class="hero-section mb-5 text-center">
-            <div class="hero-content">
-                <h1 class="display-3 mb-4 fade-in"><span class="text-gradient">charlie cullen</span></h1>
-                <p class="lead mb-4 fade-in-delay">
-                    <span class="typing-effect">comp sci student</span>
-                </p>
-                <p class="mb-5 fade-in-delay-2">
-                    Hi! I am a Computer Science student with international perspective, I am very passionate about creating innovative
-                    solutions with machine learning, data science, and modern web technologies.
-                </p>
-                <div class="hero-buttons fade-in-delay-3">
-                    <a href="projects.html" class="btn btn-light btn-lg me-3">
-                        <i class="fas fa-eye me-2"></i>View My Work
-                    </a>
-                    <a href="contact.html" class="btn btn-outline-light btn-lg">
-                        <i class="fas fa-envelope me-2"></i>Get In Touch
-                    </a>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container text-center">
+            <h1 class="display-3">Charlie Cullen</h1>
+            <p class="lead">Computer Science Student & Full-Stack Developer</p>
+            <p class="mb-4">Passionate about creating innovative solutions with machine learning, data science, and modern web technologies.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary btn-lg me-3"><i class="fas fa-folder-open me-2"></i>View Projects</a>
+                <a href="#contact" class="btn btn-outline-primary btn-lg"><i class="fas fa-envelope me-2"></i>Get In Touch</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Stats Section -->
-        <section id="stats" class="stats-section mb-5">
-            <div class="row text-center">
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-card">
-                        <h4>20+</h4>
-                        <p>Projects Completed</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-card">
-                        <h4>2.1</h4>
-                        <p>Upper Second-Class Honors</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-card">
-                        <h4>8+</h4>
-                        <p>Technologies Mastered</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-card">
-                        <h4>2</h4>
-                        <p>Countries Studied In</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Preview Section -->
-        <section id="about-preview" class="section-padding mb-5">
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">About Me</h2>
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h2 class="section-title mb-4">About Me</h2>
-                    <p class="lead mb-4">
-                        I'm a Computer Science student with a unique international perspective, having studied in both
-                        San Francisco and Cork, Ireland.
-                    </p>
-                    <p>
-                        My journey led me from considering business studies to discovering my true passion for
-                        technology and software development. I specialize in full-stack development with expertise in
-                        modern JavaScript frameworks, Python, and systems programming.
-                    </p>
-                    <div class="mt-4">
-                        <a href="about.html" class="btn btn-primary">
-                            <i class="fas fa-user me-2"></i>Learn More About Me
-                        </a>
-                    </div>
+                    <p class="lead">I'm a Computer Science student with a unique international perspective, having studied in both San Francisco and Cork, Ireland.</p>
+                    <p>My journey led me from considering business studies to discovering my true passion for technology and software development. I specialize in full-stack development with expertise in modern JavaScript frameworks, Python, and systems programming.</p>
+                    <p>Having returned to San Francisco, I'm now strengthening my technical foundation through additional coursework at City College while actively seeking internship opportunities.</p>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about-image-placeholder text-center">
-                        <i class="fas fa-user-circle fa-9x text-muted"></i>
-                        <p class="mt-3 text-muted">Professional photo coming soon</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Education</h5>
+                            <div class="mb-3">
+                                <strong>University College Cork (UCC)</strong>
+                                <p class="mb-0">Computer Science - Upper Second-Class Honors (2.1)</p>
+                                <small class="text-muted">2023-2025</small>
+                            </div>
+                            <div class="mb-3">
+                                <strong>City College of San Francisco</strong>
+                                <p class="mb-0">Continuing coursework</p>
+                                <small class="text-muted">2025-Present</small>
+                            </div>
+                            <div>
+                                <strong>Full-Stack Development Bootcamp</strong>
+                                <p class="mb-0">React & React Native specialization</p>
+                                <small class="text-muted">2023</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Preview Section -->
-        <section id="skills-preview" class="section-padding mb-5">
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
             <h2 class="section-title text-center mb-5">Technical Skills</h2>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
+            <div class="row g-4">
+                <div class="col-md-4">
                     <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-code fa-3x text-primary"></i>
-                        </div>
-                        <h3 class="skill-title">Programming & Machine Learning</h3>
-                        <p class="skill-description">
-                            Proficient in Python, JavaScript, Java, C, with expertise in ML frameworks like TensorFlow, PyTorch, scikit-learn, and NLP libraries
-                        </p>
+                        <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                        <h4>Programming</h4>
+                        <p>Python, JavaScript, Java, C</p>
                         <div class="skill-badges">
-                            <span class="skill-badge python">Python</span>
-                            <span class="skill-badge js">JavaScript</span>
-                            <span class="skill-badge java">Java</span>
-                            <span class="skill-badge c">C</span>
-                            <span class="skill-badge ml">TensorFlow</span>
-                            <span class="skill-badge ml">PyTorch</span>
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-primary">JavaScript</span>
+                            <span class="badge bg-primary">Java</span>
+                            <span class="badge bg-primary">C</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4">
+                <div class="col-md-4">
                     <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-globe fa-3x text-primary"></i>
-                        </div>
-                        <h3 class="skill-title">Web Technologies</h3>
-                        <p class="skill-description">
-                            Modern web development with React, HTML5, CSS3, Bootstrap, Flask, and Jinja
-                        </p>
+                        <i class="fas fa-globe fa-3x text-primary mb-3"></i>
+                        <h4>Web Development</h4>
+                        <p>React, HTML5, CSS3, Bootstrap, Flask</p>
                         <div class="skill-badges">
-                            <span class="skill-badge react">React</span>
-                            <span class="skill-badge html">HTML5</span>
-                            <span class="skill-badge css">CSS3</span>
-                            <span class="skill-badge bootstrap">Bootstrap</span>
+                            <span class="badge bg-info">React</span>
+                            <span class="badge bg-info">HTML5</span>
+                            <span class="badge bg-info">CSS3</span>
+                            <span class="badge bg-info">Bootstrap</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4">
+                <div class="col-md-4">
                     <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-database fa-3x text-primary"></i>
-                        </div>
-                        <h3 class="skill-title">Systems & Database</h3>
-                        <p class="skill-description">
-                            Database management, system programming, networking, and algorithm implementation
-                        </p>
+                        <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                        <h4>Systems & Database</h4>
+                        <p>SQL, POSIX, Networking, Algorithms</p>
                         <div class="skill-badges">
-                            <span class="skill-badge sql">SQL</span>
-                            <span class="skill-badge posix">POSIX</span>
-                            <span class="skill-badge networking">Networking</span>
-                            <span class="skill-badge algorithms">Algorithms</span>
+                            <span class="badge bg-success">SQL</span>
+                            <span class="badge bg-success">POSIX</span>
+                            <span class="badge bg-success">Networking</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <a href="skills.html" class="btn btn-primary btn-lg">
-                    <i class="fas fa-cogs me-2"></i>View All Skills
-                </a>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Featured Projects Section -->
-        <section id="projects-preview" class="section-padding mb-5">
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
             <h2 class="section-title text-center mb-5">Featured Projects</h2>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div style="height: 250px; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; color: white;">
-                                <i class="fas fa-chart-line fa-4x"></i>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="text-white text-center">
-                                    <h4>Predictive Stock Analysis</h4>
-                                    <p>Machine Learning & Time Series</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Predictive Stock Analysis</h3>
-                                <span class="project-type">Machine Learning</span>
-                            </div>
-                            <p class="project-description">
-                                Advanced ML models predicting stock movements using LSTM neural networks, with automated feature engineering and interactive dashboard.
-                            </p>
-                            <div class="project-technologies">
-                                <span class="tech-badge python">Python</span>
-                                <span class="tech-badge ml">LSTM</span>
-                                <span class="tech-badge ml">scikit-learn</span>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Predictive Stock Analysis</h5>
+                            <p class="card-text">Advanced ML models predicting stock movements using LSTM neural networks with interactive dashboard.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">LSTM</span>
+                                <span class="badge bg-secondary">scikit-learn</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div style="height: 250px; background: var(--gradient-secondary); display: flex; align-items: center; justify-content: center; color: white;">
-                                <i class="fas fa-gamepad fa-4x"></i>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">BizzarBazzar</h5>
+                            <p class="card-text">Full-stack quiz game with user management, score tracking, and dynamic question generation.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">Flask</span>
+                                <span class="badge bg-secondary">SQLite</span>
                             </div>
-                            <div class="project-overlay">
-                                <div class="text-white text-center">
-                                    <h4>BizzarBazzar</h4>
-                                    <p>Quiz Game Platform</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 class="project-title">BizzarBazzar</h3>
-                                <span class="project-type">Full-Stack</span>
-                            </div>
-                            <p class="project-description">
-                                Full-stack quiz game with user management, score tracking, and dynamic question generation using Flask and SQLite.
-                            </p>
-                            <div class="project-technologies">
-                                <span class="tech-badge python">Python</span>
-                                <span class="tech-badge flask">Flask</span>
-                                <span class="tech-badge sql">SQLite</span>
-                                <span class="tech-badge html">HTML</span>
-                            </div>
+                            <a href="https://github.com/charlieijk/BizzarBazzar" target="_blank" class="btn btn-sm btn-outline-primary">
+                                <i class="fab fa-github me-1"></i>View Code
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div style="height: 250px; background: var(--gradient-success); display: flex; align-items: center; justify-content: center; color: white;">
-                                <i class="fas fa-home fa-4x"></i>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Aunty Betty's Lair</h5>
+                            <p class="card-text">Interactive JavaScript game featuring AI opponents, multiplayer capabilities, and advanced game mechanics.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">HTML</span>
+                                <span class="badge bg-secondary">CSS</span>
                             </div>
-                            <div class="project-overlay">
-                                <div class="text-white text-center">
-                                    <h4>Aunty Betty's Lair</h4>
-                                    <p>JavaScript Game</p>
-                                </div>
-                            </div>
+                            <a href="https://github.com/charlieijk/AuntyBettysLair" target="_blank" class="btn btn-sm btn-outline-primary">
+                                <i class="fab fa-github me-1"></i>View Code
+                            </a>
                         </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Aunty Betty's Lair</h3>
-                                <span class="project-type">Game</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Atlantic Ocean Explorer</h5>
+                            <p class="card-text">Immersive web application featuring interactive maps, marine life galleries, and educational content.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary">HTML5</span>
+                                <span class="badge bg-secondary">CSS3</span>
+                                <span class="badge bg-secondary">Bootstrap</span>
                             </div>
-                            <p class="project-description">
-                                Interactive JavaScript game featuring AI opponents, multiplayer capabilities, and advanced game mechanics.
-                            </p>
-                            <div class="project-technologies">
-                                <span class="tech-badge js">JavaScript</span>
-                                <span class="tech-badge html">HTML</span>
-                                <span class="tech-badge css">CSS</span>
+                            <a href="https://github.com/charlieijk/AtlanticOceanExplorer" target="_blank" class="btn btn-sm btn-outline-primary">
+                                <i class="fab fa-github me-1"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Parallel Matrix Multiplication</h5>
+                            <p class="card-text">High-performance implementation using POSIX threads with dynamic load balancing.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary">C</span>
+                                <span class="badge bg-secondary">POSIX</span>
+                                <span class="badge bg-secondary">Parallel Computing</span>
                             </div>
+                            <a href="https://github.com/charlieijk/UCC-Parallel-Matrix-Multiplication-And-Mutex-Thread-Synchronization" target="_blank" class="btn btn-sm btn-outline-primary">
+                                <i class="fab fa-github me-1"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">UDP Communication System</h5>
+                            <p class="card-text">Reliable UDP-based system with custom protocols for message integrity and connection management.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary">C</span>
+                                <span class="badge bg-secondary">UDP/TCP</span>
+                                <span class="badge bg-secondary">Networking</span>
+                            </div>
+                            <a href="https://github.com/charlieijk/UCC-UDP-Client-Server-Communication-System" target="_blank" class="btn btn-sm btn-outline-primary">
+                                <i class="fab fa-github me-1"></i>View Code
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <a href="projects.html" class="btn btn-primary btn-lg">
-                    <i class="fas fa-folder-open me-2"></i>View All Projects
+
+            <div class="text-center mt-5">
+                <a href="https://github.com/charlieijk" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github me-2"></i>View All Projects on GitHub
                 </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Current Focus Section -->
-        <section id="focus" class="section-padding mb-5">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="focus-card text-center">
-                        <h2 class="section-title mb-4">Current Focus</h2>
-                        <p class="lead mb-4">
-                            🎯 <strong>Seeking Tech Internships</strong> - Currently looking for opportunities to apply my skills in a professional environment
-                        </p>
-                        <p class="mb-4">
-                            Having returned to San Francisco, I'm strengthening my technical foundation through additional coursework at City College while actively pursuing internship opportunities. My international education combined with hands-on machine learning and full-stack development experience makes me ready to contribute to innovative tech teams.
-                        </p>
-                        <div class="focus-goals">
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <i class="fas fa-rocket fa-2x text-primary mb-3"></i>
-                                    <p><span>Full-Stack Development</span><br>Building end-to-end applications</p>
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                            <h5>Email</h5>
+                            <p>charliewcullen@gmail.com</p>
+                            <a href="mailto:charliewcullen@gmail.com" class="btn btn-outline-primary btn-sm">Send Email</a>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fab fa-linkedin fa-3x text-primary mb-3"></i>
+                            <h5>LinkedIn</h5>
+                            <p>charliewcullen</p>
+                            <a href="https://linkedin.com/in/charliewcullen" target="_blank" class="btn btn-outline-primary btn-sm">Connect</a>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fab fa-github fa-3x text-primary mb-3"></i>
+                            <h5>GitHub</h5>
+                            <p>charlieijk</p>
+                            <a href="https://github.com/charlieijk" target="_blank" class="btn btn-outline-primary btn-sm">View Profile</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-4">Send a Message</h5>
+                            <form id="contact-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <i class="fas fa-brain fa-2x text-primary mb-3"></i>
-                                    <p><span>Machine Learning</span><br>Advanced ML/AI implementations</p>
-                                </div>
-                                <div class="col-md-4">
-                                    <i class="fas fa-users fa-2x text-primary mb-3"></i>
-                                    <p><span>Team Collaboration</span><br>Contributing to tech teams</p>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="bg-light text-center py-4 mt-5">
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
         <div class="container">
             <div class="social-links mb-3">
-                <a href="https://linkedin.com/in/charliewcullen" target="_blank" class="social-link">
+                <a href="https://linkedin.com/in/charliewcullen" target="_blank" class="text-white me-3">
                     <i class="fab fa-linkedin fa-2x"></i>
                 </a>
-                <a href="https://github.com/charlieijk" target="_blank" class="social-link">
+                <a href="https://github.com/charlieijk" target="_blank" class="text-white me-3">
                     <i class="fab fa-github fa-2x"></i>
                 </a>
-                <a href="mailto:charliewcullen@gmail.com" class="social-link">
+                <a href="mailto:charliewcullen@gmail.com" class="text-white">
                     <i class="fas fa-envelope fa-2x"></i>
                 </a>
             </div>
-            <p class="mb-0">&copy; 2025 Charlie Cullen's Portfolio. Built with passion and code.</p>
+            <p class="mb-0">&copy; 2025 Charlie Cullen. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <script src="updated-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
