@@ -570,8 +570,8 @@
                         <div class="col-md-4 text-center">
                             <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
                             <h5>Email</h5>
-                            <p>charliewcullen@gmail.com</p>
-                            <a href="mailto:charliewcullen@gmail.com" class="btn btn-outline-primary btn-sm">Send Email</a>
+                            <p>Click below to email me</p>
+                            <a href="#" id="index-email-link" class="btn btn-outline-primary btn-sm">Send Email</a>
                         </div>
                         <div class="col-md-4 text-center">
                             <i class="fab fa-linkedin fa-3x text-primary mb-3"></i>
@@ -632,7 +632,7 @@
                 <a href="https://github.com/charlieijk" target="_blank" class="text-white me-3">
                     <i class="fab fa-github fa-2x"></i>
                 </a>
-                <a href="mailto:charliewcullen@gmail.com" class="text-white">
+                <a href="#" id="index-footer-email-link" class="text-white">
                     <i class="fas fa-envelope fa-2x"></i>
                 </a>
             </div>
@@ -673,6 +673,19 @@
                 });
             });
         });
+
+        // Email decryption - Base64 encoded and obfuscated
+        function decryptEmail(encoded) {
+            const decoded = atob(encoded);
+            return decoded.split('').reverse().join('');
+        }
+
+        const encryptedEmail = 'bW9jLmxpYW1nQG5lbGx1Y3dlaWxyYWhj';
+        const decryptedEmail = decryptEmail(encryptedEmail);
+
+        // Set mailto links dynamically
+        document.getElementById('index-email-link').href = 'mailto:' + decryptedEmail;
+        document.getElementById('index-footer-email-link').href = 'mailto:' + decryptedEmail;
     </script>
 </body>
 </html>

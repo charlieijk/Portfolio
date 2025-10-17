@@ -223,8 +223,7 @@
             return decoded.split('').reverse().join('');
         }
 
-        // Encrypted email: charliewcullen@gmail.com
-        // Process: reverse string then base64 encode
+        // Email encryption: reverse string then base64 encode
         const encryptedEmail = 'bW9jLmxpYW1nQG5lbGx1Y3dlaWxyYWhj';
         const decryptedEmail = decryptEmail(encryptedEmail);
 

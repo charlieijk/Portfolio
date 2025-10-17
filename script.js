@@ -1,5 +1,12 @@
 // Enhanced Portfolio JavaScript with Modern Features
 
+// Email decryption utility
+function getDecryptedEmail() {
+    const encryptedEmail = 'bW9jLmxpYW1nQG5lbGx1Y3dlaWxyYWhj';
+    const decoded = atob(encryptedEmail);
+    return decoded.split('').reverse().join('');
+}
+
 // Theme Management
 
 class ThemeManager {
@@ -222,7 +229,7 @@ function generateResume() {
     const resumeContent = `
 CHARLIE CULLEN
 Full-Stack Developer & Computer Science Graduate
-Email: charliewcullen@gmail.com
+Email: ${getDecryptedEmail()}
 LinkedIn: linkedin.com/in/charliewcullen
 GitHub: github.com/charlieijk
 Location: San Francisco, CA
@@ -504,7 +511,7 @@ class ContactFormHandler {
         const body = encodeURIComponent(
             `From: ${data.name} (${data.email})\n\n${data.message}`
         );
-        const mailtoLink = `mailto:charliewcullen@gmail.com?subject=${subject}&body=${body}`;
+        const mailtoLink = `mailto:${getDecryptedEmail()}?subject=${subject}&body=${body}`;
         
         // Open email client
         window.location.href = mailtoLink;
@@ -669,7 +676,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Console message for developers
     console.log('%c👋 Hello Developer!', 'color: #007bff; font-size: 16px; font-weight: bold;');
     console.log('%cThanks for checking out my portfolio code! Feel free to reach out if you have any questions.', 'color: #666; font-size: 12px;');
-    console.log('%c📧 charliewcullen@gmail.com', 'color: #007bff; font-size: 12px;');
+    console.log('%c📧 ' + getDecryptedEmail(), 'color: #007bff; font-size: 12px;');
     
     console.log('Portfolio loaded successfully');
 });
