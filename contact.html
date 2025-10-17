@@ -70,7 +70,7 @@
                                 <h3 class="h5 mb-3">Email</h3>
                                 <p class="mb-3">Drop me a line anytime</p>
                                 <div class="contact-info">
-                                    <span id="email" class="text-primary fw-bold"></span>
+                                    <span class="text-primary fw-bold">Click below to email me</span>
                                 </div>
                                 <a href="#" id="email-link" class="btn btn-outline-primary mt-3">
                                     <i class="fas fa-paper-plane me-2"></i>Send Email
@@ -227,9 +227,6 @@
         // Process: reverse string then base64 encode
         const encryptedEmail = 'bW9jLmxpYW1nQG5lbGx1Y3dlaWxyYWhj';
         const decryptedEmail = decryptEmail(encryptedEmail);
-
-        // Set email display text
-        document.getElementById('email').textContent = decryptedEmail;
 
         // Set mailto links dynamically
         document.getElementById('email-link').href = 'mailto:' + decryptedEmail;
