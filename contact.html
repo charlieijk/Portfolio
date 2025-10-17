@@ -72,7 +72,7 @@
                                 <div class="contact-info">
                                     <span id="email" class="text-primary fw-bold"></span>
                                 </div>
-                                <a href="mailto:charliewcullen@gmail.com" class="btn btn-outline-primary mt-3">
+                                <a href="#" id="email-link" class="btn btn-outline-primary mt-3">
                                     <i class="fas fa-paper-plane me-2"></i>Send Email
                                 </a>
                             </div>
@@ -202,7 +202,7 @@
                 <a href="https://github.com/charlieijk" target="_blank" class="social-link">
                     <i class="fab fa-github fa-2x"></i>
                 </a>
-                <a href="mailto:charliewcullen@gmail.com" class="social-link">
+                <a href="#" id="footer-email-link" class="social-link">
                     <i class="fas fa-envelope fa-2x"></i>
                 </a>
             </div>
@@ -215,20 +215,25 @@
     <script src="script.js"></script>
 
     <script>
-        // Email decryption
-        function decryptEmail(parts) {
-            return parts.join('');
+        // Email decryption - Base64 encoded and obfuscated
+        function decryptEmail(encoded) {
+            // Decode from Base64
+            const decoded = atob(encoded);
+            // Reverse the string
+            return decoded.split('').reverse().join('');
         }
 
-        document.getElementById('email').textContent = decryptEmail([
-            'Charlie',
-            'W',
-            'Cullen',
-            '@',
-            'Gmail',
-            '.',
-            'Com'
-        ]).toLowerCase();
+        // Encrypted email: charliewcullen@gmail.com
+        // Process: reverse string then base64 encode
+        const encryptedEmail = 'bW9jLmxpYW1nQG5lbGx1Y3dlaWxyYWhj';
+        const decryptedEmail = decryptEmail(encryptedEmail);
+
+        // Set email display text
+        document.getElementById('email').textContent = decryptedEmail;
+
+        // Set mailto links dynamically
+        document.getElementById('email-link').href = 'mailto:' + decryptedEmail;
+        document.getElementById('footer-email-link').href = 'mailto:' + decryptedEmail;
 
         // Copy to clipboard function
         function copyToClipboard(text) {
@@ -251,17 +256,17 @@
         // Contact form handling
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(this);
             const name = formData.get('name');
             const email = formData.get('email');
             const subject = formData.get('subject');
             const message = formData.get('message');
-            
-            // Create mailto link
-            const mailtoLink = `mailto:charliewcullen@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
-            
+
+            // Create mailto link with decrypted email
+            const mailtoLink = `mailto:${decryptedEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+
             // Open email client
             window.location.href = mailtoLink;
             
