@@ -642,49 +642,35 @@ class AccessibilityManager {
     }
 }
 
-// Project Date Display from HTML Comments
+// Project Date Display from data attributes
 class ProjectDateDisplay {
     constructor() {
         this.init();
     }
 
     init() {
-        this.displayDatesFromComments();
+        this.displayDates();
     }
 
-    displayDatesFromComments() {
-        const projectItems = document.querySelectorAll('.project-item');
+    displayDates() {
+        const projectItems = document.querySelectorAll('.project-item[data-date]');
 
         projectItems.forEach(item => {
             const card = item.querySelector('.project-card');
-            if (card) {
-                // Find the HTML comment before this project item
-                const comment = this.findProjectComment(item);
-                if (comment) {
-                    const date = this.extractDateFromComment(comment);
-                    if (date) {
-                        this.displayDate(card, date);
-                    }
+            const dateString = item.getAttribute('data-date');
+
+            if (card && dateString) {
+                const date = this.parseDate(dateString);
+                if (date) {
+                    this.displayDate(card, date);
                 }
             }
         });
     }
 
-    findProjectComment(element) {
-        // Look for the comment node before this element
-        let node = element.previousSibling;
-        while (node) {
-            if (node.nodeType === Node.COMMENT_NODE) {
-                return node.nodeValue;
-            }
-            node = node.previousSibling;
-        }
-        return null;
-    }
-
-    extractDateFromComment(comment) {
-        // Extract date in format YYYY-MM-DD from comment like "Project 22: Atlantic Ocean Explorer (2023-12-08)"
-        const match = comment.match(/\((\d{4})-(\d{2})-(\d{2})\)/);
+    parseDate(dateString) {
+        // Parse date string in format YYYY-MM-DD
+        const match = dateString.match(/(\d{4})-(\d{2})-(\d{2})/);
         if (match) {
             return {
                 year: match[1],
