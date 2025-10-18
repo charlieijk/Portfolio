@@ -642,65 +642,57 @@ class AccessibilityManager {
     }
 }
 
-// GitHub Repository Date Fetcher
-class GitHubDateFetcher {
+// Project Date Display from HTML Comments
+class ProjectDateDisplay {
     constructor() {
-        this.username = 'charlieijk';
-        this.cache = new Map();
         this.init();
     }
 
     init() {
-        this.fetchAndDisplayDates();
+        this.displayDatesFromComments();
     }
 
-    async fetchAndDisplayDates() {
-        const projectCards = document.querySelectorAll('.project-card');
+    displayDatesFromComments() {
+        const projectItems = document.querySelectorAll('.project-item');
 
-        for (const card of projectCards) {
-            const githubLink = card.querySelector('a[href*="github.com"]');
-            if (githubLink) {
-                const repoName = this.extractRepoName(githubLink.href);
-                if (repoName) {
-                    await this.fetchAndAddDate(card, repoName);
+        projectItems.forEach(item => {
+            const card = item.querySelector('.project-card');
+            if (card) {
+                // Find the HTML comment before this project item
+                const comment = this.findProjectComment(item);
+                if (comment) {
+                    const date = this.extractDateFromComment(comment);
+                    if (date) {
+                        this.displayDate(card, date);
+                    }
                 }
             }
-        }
+        });
     }
 
-    extractRepoName(githubUrl) {
-        const match = githubUrl.match(/github\.com\/[^\/]+\/([^\/\?#]+)/);
-        return match ? match[1] : null;
+    findProjectComment(element) {
+        // Look for the comment node before this element
+        let node = element.previousSibling;
+        while (node) {
+            if (node.nodeType === Node.COMMENT_NODE) {
+                return node.nodeValue;
+            }
+            node = node.previousSibling;
+        }
+        return null;
     }
 
-    async fetchAndAddDate(card, repoName) {
-        try {
-            // Check cache first
-            if (this.cache.has(repoName)) {
-                this.displayDate(card, this.cache.get(repoName));
-                return;
-            }
-
-            // Fetch from GitHub API
-            const response = await fetch(`https://api.github.com/repos/${this.username}/${repoName}`);
-
-            if (!response.ok) {
-                console.warn(`Failed to fetch data for ${repoName}`);
-                return;
-            }
-
-            const data = await response.json();
-            const createdDate = new Date(data.created_at);
-
-            // Cache the result
-            this.cache.set(repoName, createdDate);
-
-            // Display the date
-            this.displayDate(card, createdDate);
-
-        } catch (error) {
-            console.error(`Error fetching date for ${repoName}:`, error);
+    extractDateFromComment(comment) {
+        // Extract date in format YYYY-MM-DD from comment like "Project 22: Atlantic Ocean Explorer (2023-12-08)"
+        const match = comment.match(/\((\d{4})-(\d{2})-(\d{2})\)/);
+        if (match) {
+            return {
+                year: match[1],
+                month: match[2],
+                day: match[3]
+            };
         }
+        return null;
     }
 
     displayDate(card, date) {
@@ -711,7 +703,7 @@ class GitHubDateFetcher {
             return;
         }
 
-        // Format date
+        // Format date (Month Year only)
         const formattedDate = this.formatDate(date);
 
         // Create date element
@@ -727,8 +719,15 @@ class GitHubDateFetcher {
     }
 
     formatDate(date) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return date.toLocaleDateString('en-US', options);
+        // Convert month number to month name
+        const monthNames = [
+            'January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        const monthIndex = parseInt(date.month) - 1;
+        const monthName = monthNames[monthIndex];
+
+        return `${monthName} ${date.year}`;
     }
 }
 
@@ -743,7 +742,7 @@ document.addEventListener('DOMContentLoaded', function() {
     new ErrorHandler();
     new ContactFormHandler();
     new AccessibilityManager();
-    new GitHubDateFetcher();
+    new ProjectDateDisplay();
 
     // Initialize typing effect on homepage
     // const typingElement = document.querySelector('.typing-effect');
