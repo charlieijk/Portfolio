@@ -642,6 +642,96 @@ class AccessibilityManager {
     }
 }
 
+// GitHub Repository Date Fetcher
+class GitHubDateFetcher {
+    constructor() {
+        this.username = 'charlieijk';
+        this.cache = new Map();
+        this.init();
+    }
+
+    init() {
+        this.fetchAndDisplayDates();
+    }
+
+    async fetchAndDisplayDates() {
+        const projectCards = document.querySelectorAll('.project-card');
+
+        for (const card of projectCards) {
+            const githubLink = card.querySelector('a[href*="github.com"]');
+            if (githubLink) {
+                const repoName = this.extractRepoName(githubLink.href);
+                if (repoName) {
+                    await this.fetchAndAddDate(card, repoName);
+                }
+            }
+        }
+    }
+
+    extractRepoName(githubUrl) {
+        const match = githubUrl.match(/github\.com\/[^\/]+\/([^\/\?#]+)/);
+        return match ? match[1] : null;
+    }
+
+    async fetchAndAddDate(card, repoName) {
+        try {
+            // Check cache first
+            if (this.cache.has(repoName)) {
+                this.displayDate(card, this.cache.get(repoName));
+                return;
+            }
+
+            // Fetch from GitHub API
+            const response = await fetch(`https://api.github.com/repos/${this.username}/${repoName}`);
+
+            if (!response.ok) {
+                console.warn(`Failed to fetch data for ${repoName}`);
+                return;
+            }
+
+            const data = await response.json();
+            const createdDate = new Date(data.created_at);
+
+            // Cache the result
+            this.cache.set(repoName, createdDate);
+
+            // Display the date
+            this.displayDate(card, createdDate);
+
+        } catch (error) {
+            console.error(`Error fetching date for ${repoName}:`, error);
+        }
+    }
+
+    displayDate(card, date) {
+        const cardBody = card.querySelector('.card-body');
+
+        // Check if date already exists
+        if (cardBody.querySelector('.project-date')) {
+            return;
+        }
+
+        // Format date
+        const formattedDate = this.formatDate(date);
+
+        // Create date element
+        const dateElement = document.createElement('p');
+        dateElement.className = 'project-date text-muted small mb-2';
+        dateElement.innerHTML = `<i class="fas fa-calendar-alt me-1"></i>${formattedDate}`;
+
+        // Insert after title
+        const title = cardBody.querySelector('.card-title');
+        if (title) {
+            title.parentNode.insertBefore(dateElement, title.nextSibling);
+        }
+    }
+
+    formatDate(date) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+    }
+}
+
 // Initialize all features
 document.addEventListener('DOMContentLoaded', function() {
     // Core functionality
@@ -653,6 +743,7 @@ document.addEventListener('DOMContentLoaded', function() {
     new ErrorHandler();
     new ContactFormHandler();
     new AccessibilityManager();
+    new GitHubDateFetcher();
 
     // Initialize typing effect on homepage
     // const typingElement = document.querySelector('.typing-effect');
@@ -673,6 +764,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('%c👋 Hello Developer!', 'color: #007bff; font-size: 16px; font-weight: bold;');
     console.log('%cThanks for checking out my portfolio code! Feel free to reach out if you have any questions.', 'color: #666; font-size: 12px;');
     console.log('%c📧 ' + getDecryptedEmail(), 'color: #007bff; font-size: 12px;');
-    
+
     console.log('Portfolio loaded successfully');
 });
