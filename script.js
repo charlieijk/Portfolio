@@ -239,10 +239,6 @@ University College Cork (2023-2025)
 Bachelor of Science in Computer Science
 Upper Second-Class Honors (2.1)
 
-Cork College of Commerce (2023)
-Full-Stack Development Program
-Specialization: React & React Native
-
 TECHNICAL SKILLS
 Programming Languages: Python, JavaScript, Java, C, Shell, MIPS Assembly
 Web Technologies: React, HTML5, CSS3, Bootstrap, Flask, Jinja
